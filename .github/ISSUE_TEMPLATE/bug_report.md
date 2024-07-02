@@ -1,27 +1,61 @@
----
 name: Bug report
-about: Create a report to help us improve
-title: ''
-labels: 'bug'
-assignees: ''
+description: Something isn't working as expected
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        🔎 Search existing issues to avoid creating duplicates.
+  - type: textarea
+    id: describe
+    attributes:
+      label: Describe the bug
+      description: >-
+        Write a short summary of the bug
+      placeholder: >
+        Try to state the actual problem, and not just what you think the solution might be.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: To Reproduce
+      description: >-
+        Give a detailed step by step instructions on how to reproduce the issue.
+        The more detail you go here the easier it is for us to fix it! This
+        includes providing any assets such as maps/materials/models/code which
+        is causing your bug.
+      placeholder: >-
+        1. Go to '...'
 
----
+        2. Click on '....'
 
-**Describe the bug**
-A clear and concise description of what the bug is.
-
-**To Reproduce**
-Steps to reproduce the behavior:
-1. Go to '...'
-2. Click on '....'
-3. Scroll down to '....'
-4. See error
-
-**Expected behavior**
-A clear and concise description of what you expected to happen.
-
-**Screenshots**
-If applicable, add screenshots to help explain your problem.
-
-**Additional context**
-Add any other context about the problem here.
+        3. Scroll down to '....'
+        
+        4. See error
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+      description: What should be happening instead? What is the intended behavior
+      placeholder: The expected result should be...
+    validations:
+      required: true
+  - type: textarea
+    id: files
+    attributes:
+      label: Media/Files
+      description: >-
+        Any useful screenshots, videos, files, logs which are used to show
+        what's going on
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional context
+      description: >-
+        Add any other context about the problem here, like hardware/software
+        information you think might make this easier to diagnose.
+      placeholder: I'm running on Windows 11, my computer specs are ...
